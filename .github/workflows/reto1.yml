@@ -1,0 +1,13 @@
+name: Create File
+on:
+  push:
+    branches: [ main ]  # Cambia 'main' por el nombre de la rama que deseas utilizar.
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Create file
+      run: |
+        touch example.txt
+        echo "Hello, world!" >> example.txt
