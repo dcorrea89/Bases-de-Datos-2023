@@ -1,0 +1,14 @@
+name: Read CSV
+on:
+  push:
+    branches: [ main ] # Cambia 'main' por el nombre de la rama que deseas utilizar.
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+    - name: Read CSV
+      run: |
+        echo "Reading CSV..."
+        cat file.csv
